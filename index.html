@@ -39,7 +39,7 @@
 
                  data-materia-id="0" onclick="getSeleccion(1)">Enlace</a>
                 </div>
-                <div class="card-body" id="dibujoSeleccionado" onclick="mostrarDibujoSeleccionado('patata')">
+                <div class="card-body" id="dibujoSeleccionado" onclick="mostrarElementoSeleccionado('patata')">
                   
                     
                 </div> 
@@ -49,19 +49,8 @@
         
         <div class="fixed-bottom bg-success">
             
-            <div class="scrollmenu" id="seccionInferiorSeleccionar">
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(1)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(2)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(3)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(4)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(5)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(6)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(7)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(8)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(9)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(10)"></span>
-                <span class="rounded-circle circulo" onclick="mostrarDibujoSeleccionado(11)"></span>
-          </div>
+            <div class="scrollmenu" id="botoneraSeccionInferior">
+            </div>
         
         </div>
       
@@ -70,3 +59,9 @@
   </body>
   
 </html>
+
+<script>
+    
+    inicializarSeccionInferior();
+    
+</script>

@@ -1,7 +1,23 @@
 
-function mostrarDibujoSeleccionado(seleccionado){
+function inicializarSeccionInferior() {
+    
+    var elementoBotoneraSeccionInferior = document.getElementById('botoneraSeccionInferior');
+    elementoBotoneraSeccionInferior.innerHTML = "";
+    
+    var objetosBotonera = "";
+    for ( var i = 0 ; i < 20 ; i++) {
         
-    console.log('mostrarDibujoSeleccionado: ' + seleccionado);
+        objetosBotonera = objetosBotonera + '<span class="rounded-circle circulo" onclick="mostrarElementoSeleccionado(' + i + ')"></span>';
+        
+    }
+    
+    elementoBotoneraSeccionInferior.innerHTML = objetosBotonera;
+    
+}
+
+function mostrarElementoSeleccionado(seleccionado){
+        
+    console.log('mostrarElementoSeleccionado: ' + seleccionado);
 
     document.getElementById('dibujoSeleccionado').innerHTML = "";
     document.getElementById('dibujoSeleccionado').innerHTML = "Texto: " + seleccionado;
@@ -19,3 +35,4 @@ function getSeleccion(seleccionado){
     });
 	
 }
+
