@@ -30,19 +30,15 @@
         
         <div class="col-sm-12">
       
-            <div class="card">
-                <div class="card-header">
-                    <h5>Contenidos</h5>
-                    <a id="nuevaSeleccion"
-                 href="#" 
-                 class="btn btn-primary border boder-info border-top-0 border-bottom-0 border-right-0" 
-
-                 data-materia-id="0" onclick="getSeleccion(1)">Enlace</a>
+            <div class="card" onclick="mostrarElementoSeleccionado('patata')">
+                
+                <div class="card-header text-center">
+                    <h2 id="colorAMostrar">Colores</h2>
                 </div>
-                <div class="card-body" id="dibujoSeleccionado" onclick="mostrarElementoSeleccionado('patata')">
-                  
-                    
+                
+                <div class="card-body" id="dibujoSeleccionado" >
                 </div> 
+                
             </div>
           
         </div>
@@ -62,6 +58,6 @@
 
 <script>
     
-    inicializarSeccionInferior();
+    inicializarBotoneraSeccionInferior();
     
 </script>

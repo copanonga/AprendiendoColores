@@ -2,7 +2,7 @@
    "colores": [
        {
             "id": 1,
-            "hex": "#",
+            "hex": "#0000ff",
             "imagen": "url",
             "idioma": [
                 {
@@ -14,6 +14,22 @@
                     "texto": "Blue"
                 }
             ]
+       },
+       {
+            "id": 2,
+            "hex": "#ff0000",
+            "imagen": "url",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Rojo"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Red"
+                }
+            ]
        }
-   ]
+   ],
+   "success":1
 }
