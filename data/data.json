@@ -1,0 +1,19 @@
+{
+   "colores": [
+       {
+            "id": 1,
+            "hex": "#",
+            "imagen": "url",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Azul"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Blue"
+                }
+            ]
+       }
+   ]
+}
