@@ -2,6 +2,7 @@
 function mostrarElementoSeleccionado(seleccionado) {
         
     console.log('mostrarElementoSeleccionado: ' + seleccionado);
+    document.getElementById('idColorSeleccionado').value = seleccionado;
 
     $.getJSON('data/data.json', function(data) {
 
@@ -30,6 +31,11 @@ function mostrarElementoSeleccionado(seleccionado) {
                             if (idiomaAMostrar['idioma'] === 'es-ES') {
                                 document.getElementById('colorAMostrar').innerHTML = "";
                                 document.getElementById('colorAMostrar').innerHTML = idiomaAMostrar['texto'];
+                                
+                                document.getElementById("dibujoAMostrar").src=colorObtenido['imagen'];
+                                
+                                //responsiveVoice.speak(idiomaAMostrar['texto'],"Spanish Female");
+
                             }
                             
                         }
@@ -72,6 +78,7 @@ function inicializarBotoneraSeccionInferior() {
                 elementoBotoneraSeccionInferior.innerHTML = objetosBotonera;
                 
                 mostrarElementoSeleccionado(1);
+                document.getElementById('idColorSeleccionado').value = 1;
              
             }
         
@@ -80,26 +87,49 @@ function inicializarBotoneraSeccionInferior() {
 }
 
 
-function getSeleccion(seleccionado) {
+function reproducirTexto() {
 	
+    var seleccionado = document.getElementById('idColorSeleccionado').value;
     console.log('getSeleccion: ' + seleccionado);
 	
     $.getJSON('data/data.json', function(data) {
 
-            console.log('Data: ' + data );
-            console.log("Datos: " + JSON.stringify(data));
+            //console.log("Datos: " + JSON.stringify(data));
             
-            var mostrarData= JSON.stringify(data);
-            
-            if(mostrarData['success']==0) {
-                console.log("Error: success " + mostrarData['success']);
+            if(data['success']==0) {
+                console.log("Error: success " + data['success']);
             } else {
 
                 console.log("Success");
-             
-            }
+                
+                var coloresObtenidos = data['colores'];
+                
+                for ( var i = 0 ; i < coloresObtenidos.length ; i++) {
+                    
+                    var colorObtenido = coloresObtenidos[i];
+                    
+                    if (colorObtenido['id'] == seleccionado) {
+                        
+                        var idiomaObtenido = colorObtenido['idioma'];
+                        
+                        for ( var j = 0 ; j < idiomaObtenido.length ; j++) {
+                            
+                            var idiomaAMostrar = idiomaObtenido[j];
+                            
+                            if (idiomaAMostrar['idioma'] === 'es-ES') {
+                                
+                                responsiveVoice.speak(idiomaAMostrar['texto'],"Spanish Female");
 
-            
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+        
     });
 	
 }

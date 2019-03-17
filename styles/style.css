@@ -1,0 +1,50 @@
+/**
+    Menú horizontal
+*/
+
+div.scrollmenu {  
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+
+/**
+    Redondear botones sección inferior
+*/
+
+.circulo {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 6px;
+    background-color: white;
+}
+
+/**
+    Posicionar imagen
+*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-height {
+    margin-top:80px;
+    height: 75%;
+}
+
+.full-height img {
+   height: auto;
+   max-height: 100%;
+}

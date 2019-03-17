@@ -1,9 +1,39 @@
 {
    "colores": [
-       {
+        {
             "id": 1,
+            "hex": "#ff0000",
+            "imagen": "images/color/rojogrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Rojo"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Red"
+                }
+            ]
+       },
+       {
+            "id": 2,
+            "hex": "#FFFF00",
+            "imagen": "images/color/amarillogrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Amarillo"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Yellow"
+                }
+            ]
+       },
+       {
+            "id": 3,
             "hex": "#0000ff",
-            "imagen": "url",
+            "imagen": "images/color/azulgrande.png",
             "idioma": [
                 {
                     "idioma": "es-ES",
@@ -16,17 +46,107 @@
             ]
        },
        {
-            "id": 2,
-            "hex": "#ff0000",
-            "imagen": "url",
+            "id": 4,
+            "hex": "#00FF00",
+            "imagen": "images/color/verdegrande.png",
             "idioma": [
                 {
                     "idioma": "es-ES",
-                    "texto": "Rojo"
+                    "texto": "Verde"
                 },
                 {
                     "idioma": "en-EN",
-                    "texto": "Red"
+                    "texto": "Green"
+                }
+            ]
+       },
+       {
+            "id": 5,
+            "hex": "#FFA500",
+            "imagen": "images/color/naranjagrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Naranja"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Orange"
+                }
+            ]
+       },
+       {
+            "id": 6,
+            "hex": "#9400D3",
+            "imagen": "images/color/violetagrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Violeta"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Purple"
+                }
+            ]
+       },
+       {
+            "id": 7,
+            "hex": "#8B4513",
+            "imagen": "images/color/marrongrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Marrón"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Brown"
+                }
+            ]
+       },
+       {
+            "id": 8,
+            "hex": "#1A1A1A",
+            "imagen": "images/color/negrogrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Negro"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Black"
+                }
+            ]
+       },
+       {
+            "id": 9,
+            "hex": "#808080",
+            "imagen": "images/color/grisgrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Gris"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "Grey"
+                }
+            ]
+       },
+       {
+            "id": 10,
+            "hex": "#F9F9F9",
+            "imagen": "images/color/blancogrande.png",
+            "idioma": [
+                {
+                    "idioma": "es-ES",
+                    "texto": "Blanco"
+                },
+                {
+                    "idioma": "en-EN",
+                    "texto": "White"
                 }
             ]
        }
