@@ -3,6 +3,7 @@ function mostrarElementoSeleccionado(seleccionado) {
         
     console.log('mostrarElementoSeleccionado: ' + seleccionado);
     document.getElementById('idColorSeleccionado').value = seleccionado;
+    var elementoIdiomaSeleccionado = document.getElementById('idiomaSeleccionado').value;
 
     $.getJSON('data/data.json', function(data) {
 
@@ -28,13 +29,12 @@ function mostrarElementoSeleccionado(seleccionado) {
                             
                             var idiomaAMostrar = idiomaObtenido[j];
                             
-                            if (idiomaAMostrar['idioma'] === 'es-ES') {
+                            if (idiomaAMostrar['idioma'] == elementoIdiomaSeleccionado) {
+
                                 document.getElementById('colorAMostrar').innerHTML = "";
                                 document.getElementById('colorAMostrar').innerHTML = idiomaAMostrar['texto'];
                                 
                                 document.getElementById("dibujoAMostrar").src=colorObtenido['imagen'];
-                                
-                                //responsiveVoice.speak(idiomaAMostrar['texto'],"Spanish Female");
 
                             }
                             
@@ -91,6 +91,7 @@ function reproducirTexto() {
 	
     var seleccionado = document.getElementById('idColorSeleccionado').value;
     console.log('getSeleccion: ' + seleccionado);
+    var elementoIdiomaSeleccionado = document.getElementById('idiomaSeleccionado').value;
 	
     $.getJSON('data/data.json', function(data) {
 
@@ -116,7 +117,7 @@ function reproducirTexto() {
                             
                             var idiomaAMostrar = idiomaObtenido[j];
                             
-                            if (idiomaAMostrar['idioma'] === 'es-ES') {
+                            if (idiomaAMostrar['idioma'] == elementoIdiomaSeleccionado) {
                                 
                                 responsiveVoice.speak(idiomaAMostrar['texto'],"Spanish Female");
 
