@@ -119,8 +119,16 @@ function reproducirTexto() {
                             
                             if (idiomaAMostrar['idioma'] == elementoIdiomaSeleccionado) {
                                 
-                                responsiveVoice.speak(idiomaAMostrar['texto'],"Spanish Female");
-
+                                if (idiomaAMostrar['idioma'] == "es-ES") {
+                                    var vozAEscuchar = "Spanish Female";
+                                    responsiveVoice.speak(idiomaAMostrar['texto'],vozAEscuchar);
+                                }
+                                
+                                if (idiomaAMostrar['idioma'] == "en-EN") {
+                                    var vozAEscuchar = "UK English Female";
+                                    responsiveVoice.speak(idiomaAMostrar['texto'],vozAEscuchar);
+                                }
+                                
                             }
                             
                         }
@@ -134,4 +142,3 @@ function reproducirTexto() {
     });
 	
 }
-
